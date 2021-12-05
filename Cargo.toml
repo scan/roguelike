@@ -1,0 +1,17 @@
+[package]
+name = "roguelike"
+version = "0.1.0"
+publish = false
+edition = "2021"
+
+[profile.dev]
+opt-level = 1
+
+[dependencies]
+bevy = "0.5.0"
+bevy_kira_audio = "0.6.0"
+bevy_asset_loader = "0.6.0"
+rand = "0.8.4"
+
+[build-dependencies]
+embed-resource = "1.4"
