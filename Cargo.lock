@@ -539,6 +539,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "bevy_pixel_camera"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4825b4a00fdd7238d9e63b8c2ef4c45aded54f0f7b92b5a9d9d89c019e94fc06"
+dependencies = [
+ "bevy",
+]
+
+[[package]]
 name = "bevy_reflect"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2930,6 +2939,7 @@ dependencies = [
  "bevy_asset_loader",
  "bevy_ecs_tilemap",
  "bevy_kira_audio",
+ "bevy_pixel_camera",
  "embed-resource",
  "rand",
 ]

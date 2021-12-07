@@ -1,11 +1,13 @@
 mod assets;
 mod game;
 mod state;
+mod component;
 
 use bevy::{
     diagnostic::{FrameTimeDiagnosticsPlugin, LogDiagnosticsPlugin},
     prelude::*,
 };
+use bevy_pixel_camera::{PixelBorderPlugin, PixelCameraPlugin};
 
 fn main() {
     let mut app = App::build();
@@ -18,6 +20,10 @@ fn main() {
             ..Default::default()
         })
         .add_plugins(DefaultPlugins)
+        .add_plugin(PixelCameraPlugin)
+        .add_plugin(PixelBorderPlugin {
+            color: Color::rgb(0.1, 0.1, 0.1),
+        })
         .add_plugin(game::GamePlugin);
 
     #[cfg(debug_assertions)]
