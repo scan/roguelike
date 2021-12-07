@@ -1,3 +1,7 @@
+mod assets;
+mod game;
+mod state;
+
 use bevy::{
     diagnostic::{FrameTimeDiagnosticsPlugin, LogDiagnosticsPlugin},
     prelude::*,
@@ -13,7 +17,8 @@ fn main() {
             title: "Roguelike!".to_string(),
             ..Default::default()
         })
-        .add_plugins(DefaultPlugins);
+        .add_plugins(DefaultPlugins)
+        .add_plugin(game::GamePlugin);
 
     #[cfg(debug_assertions)]
     {
